@@ -119,4 +119,30 @@ body {
       }
     }
   }
+
+  main#home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include easein;
+
+    h1 {
+      text-align: center;
+      div {
+        display: inline;
+        color: $py-color;
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+
+    &.fade {
+      opacity: 0.01;
+    }
+  }
 }

@@ -89,3 +89,22 @@ body {
             font-size: 2rem; }
             body .menu .menu-func .menu-nav .nav-items .nav-links:hover {
               color: #fff; }
+  body main#home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all ease-in; }
+    body main#home h1 {
+      text-align: center; }
+      body main#home h1 div {
+        display: inline;
+        color: #f0591e;
+        font-size: 2rem;
+        text-align: center; }
+    body main#home.fade {
+      opacity: 0.01; }
