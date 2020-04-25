@@ -8,6 +8,7 @@ body {
   background-size: cover;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   body .menu {
+    z-index: 8;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -49,7 +50,8 @@ body {
       height: 100vh;
       background: rgba(34, 34, 34, 0.7);
       transform: translateY(100%);
-      transition: 0.5s all ease-in; }
+      transition: 0.5s all ease-in;
+      z-index: 5; }
       body .menu .menu-func.show {
         display: block;
         transform: translateY(0); }
@@ -81,15 +83,11 @@ body {
         body .menu .menu-func .menu-nav .nav-items {
           padding: 0.5rem;
           list-style: none; }
-          body .menu .menu-func .menu-nav .nav-items:hover {
-            border-bottom: 3px solid #222; }
           body .menu .menu-func .menu-nav .nav-items .nav-links {
             text-decoration: none;
             color: #222;
             font-weight: 400;
             font-size: 2rem; }
-            body .menu .menu-func .menu-nav .nav-items .nav-links:hover {
-              color: #fff; }
   body main#home {
     position: absolute;
     width: 100%;

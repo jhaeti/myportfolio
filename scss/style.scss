@@ -6,6 +6,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   .menu {
+    z-index: 8;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -62,6 +63,7 @@ body {
       background: rgba($sy-color, 0.7);
       transform: translateY(100%);
       @include easein;
+      z-index: 5;
 
       &.show {
         display: block;
@@ -102,19 +104,11 @@ body {
           padding: 0.5rem;
           list-style: none;
 
-          &:hover {
-            border-bottom: 3px solid $sy-color;
-          }
-
           .nav-links {
             text-decoration: none;
             color: $sy-color;
             font-weight: 400;
             font-size: 2rem;
-
-            &:hover {
-              color: #fff;
-            }
           }
         }
       }
