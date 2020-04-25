@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url("/dist/img/bg-img.jpg") no-repeat;
+  background: linear-gradient(90deg, rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0.9)), url("/dist/img/bg-img.jpg") no-repeat;
   background-size: cover;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   body .menu {
@@ -25,10 +25,11 @@ body {
       body .menu .menu-burger .btn-line {
         width: 28px;
         height: 3px;
-        background: #222;
+        background: #f0591e;
         margin-bottom: 5px;
         transition: 0.5s all ease-in;
-        border-radius: 5px; }
+        border-radius: 5px;
+        cursor: pointer; }
         body .menu .menu-burger .btn-line:nth-child(1).show {
           width: 15px;
           transform: translate(13px, 4px) rotate(45deg);
@@ -98,13 +99,24 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.5s all ease-in; }
+    transition: 0.5s all ease-in;
+    color: #fff; }
+    body main#home .greeting {
+      width: 100%;
+      background: rgba(34, 34, 34, 0.7);
+      text-align: center;
+      padding: 0.2rem; }
+      body main#home .greeting h3 {
+        font-size: 2rem;
+        font-weight: 400; }
     body main#home h1 {
-      text-align: center; }
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 400; }
       body main#home h1 div {
         display: inline;
         color: #f0591e;
-        font-size: 2rem;
+        font-weight: 600;
         text-align: center; }
     body main#home.fade {
       opacity: 0.01; }

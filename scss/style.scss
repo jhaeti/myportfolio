@@ -1,6 +1,6 @@
 @import "config";
 body {
-  background: linear-gradient(90deg, rgba(#fff, 0.7), rgba(#fff, 0.9)),
+  background: linear-gradient(90deg, rgba($sy-color, 0.9), rgba($sy-color, 0.9)),
     url("/dist/img/bg-img.jpg") no-repeat;
   background-size: cover;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,10 +26,11 @@ body {
       .btn-line {
         width: 28px;
         height: 3px;
-        background: $sy-color;
+        background: $py-color;
         margin-bottom: 5px;
         @include easein;
         border-radius: 5px;
+        cursor: pointer;
 
         &:nth-child(1).show {
           width: 15px;
@@ -130,13 +131,28 @@ body {
     align-items: center;
     flex-direction: column;
     @include easein;
+    color: #fff;
+
+    .greeting {
+      width: 100%;
+      background: rgba($sy-color, 0.7);
+      text-align: center;
+      padding: 0.2rem;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
 
     h1 {
       text-align: center;
+      font-size: 3rem;
+      font-weight: 400;
       div {
         display: inline;
         color: $py-color;
-        font-size: 2rem;
+        font-weight: 600;
         text-align: center;
       }
     }
