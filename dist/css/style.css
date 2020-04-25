@@ -1,0 +1,4 @@
+body {
+  background: linear-gradient(90deg, rgba(240, 89, 30, 0.7), rgba(240, 89, 30, 0.9)), url("/dist/img/bg-img.jpg") no-repeat;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
