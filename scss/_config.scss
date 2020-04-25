@@ -8,7 +8,12 @@ $sy-color: #222;
 }
 
 @mixin mdscreen {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+@mixin lgscreen {
+  @media screen and (min-width: 800px) {
     @content;
   }
 }

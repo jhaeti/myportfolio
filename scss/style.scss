@@ -155,4 +155,45 @@ body {
       opacity: 0.01;
     }
   }
+
+  @include mdscreen {
+    main ul {
+      display: none;
+    }
+    img {
+      display: none;
+    }
+  }
+  @include lgscreen {
+    .menu {
+      display: none;
+    }
+
+    main#home {
+      margin-top: 15%;
+      margin: auto;
+      width: 80%;
+      height: 70vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      background: rgba($sy-color, 0.9);
+
+      .menu-nav1 {
+        position: absolute;
+        top: 0;
+        display: flex;
+        background: #000;
+        width: 100%;
+        .nav-items {
+          padding: 1rem 2rem;
+        }
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+  }
 }

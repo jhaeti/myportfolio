@@ -118,3 +118,31 @@ body {
         text-align: center; }
     body main#home.fade {
       opacity: 0.01; }
+  @media screen and (max-width: 800px) {
+    body main ul {
+      display: none; }
+    body img {
+      display: none; } }
+  @media screen and (min-width: 800px) {
+    body .menu {
+      display: none; }
+    body main#home {
+      margin-top: 15%;
+      margin: auto;
+      width: 80%;
+      height: 70vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      background: rgba(34, 34, 34, 0.9); }
+      body main#home .menu-nav1 {
+        position: absolute;
+        top: 0;
+        display: flex;
+        background: #000;
+        width: 100%; }
+        body main#home .menu-nav1 .nav-items {
+          padding: 1rem 2rem; }
+      body main#home img {
+        width: 100px; } }
