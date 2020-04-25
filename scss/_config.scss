@@ -1,0 +1,18 @@
+$py-color: #f0591e;
+$sy-color: #222;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin mdscreen {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin easein {
+  transition: 0.5s all ease-in;
+}

@@ -1,0 +1,122 @@
+@import "config";
+body {
+  background: linear-gradient(90deg, rgba(#fff, 0.7), rgba(#fff, 0.9)),
+    url("/dist/img/bg-img.jpg") no-repeat;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  .menu {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    .menu-burger {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      padding: 5px;
+      background: transparent;
+      z-index: 10;
+      @include easein;
+      &.rotate {
+        transform: rotate(180deg);
+      }
+
+      .btn-line {
+        width: 28px;
+        height: 3px;
+        background: $sy-color;
+        margin-bottom: 5px;
+        @include easein;
+        border-radius: 5px;
+
+        &:nth-child(1).show {
+          width: 15px;
+          transform: translate(13px, 4px) rotate(45deg);
+          background-color: #fff;
+        }
+
+        &.show {
+          width: 20px;
+          transform: translateX(5px);
+          background-color: #fff;
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 0px;
+
+          &.show {
+            width: 15px;
+            transform: translate(13px, -4px) rotate(-45deg);
+            background: #fff;
+          }
+        }
+      }
+    }
+
+    .menu-func {
+      width: 100vw;
+      height: 100vh;
+      background: rgba($sy-color, 0.7);
+      transform: translateY(100%);
+      @include easein;
+
+      &.show {
+        display: block;
+        transform: translateY(0);
+      }
+
+      .profile {
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img {
+          width: 27vh;
+          height: 27vh;
+          background: url("/dist/img/smallpotrait.jpg");
+          background-size: cover;
+          border-radius: 50%;
+          border: 3px solid $py-color;
+        }
+      }
+
+      .menu-nav {
+        background: rgba($py-color, 0.9);
+        height: 70%;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+
+        .nav-items {
+          padding: 0.5rem;
+          list-style: none;
+
+          &:hover {
+            border-bottom: 3px solid $sy-color;
+          }
+
+          .nav-links {
+            text-decoration: none;
+            color: $sy-color;
+            font-weight: 400;
+            font-size: 2rem;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
