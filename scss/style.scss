@@ -18,6 +18,7 @@ body {
       right: 1.5rem;
       padding: 5px;
       background: transparent;
+      cursor: pointer;
       z-index: 10;
       @include easein;
       &.rotate {
@@ -35,7 +36,7 @@ body {
 
         &:nth-child(1).show {
           width: 15px;
-          transform: translate(13px, 4px) rotate(45deg);
+          transform: translate(0, 4px) rotate(-45deg);
           background-color: #fff;
         }
 
@@ -50,7 +51,7 @@ body {
 
           &.show {
             width: 15px;
-            transform: translate(13px, -4px) rotate(-45deg);
+            transform: translate(0, -4px) rotate(45deg);
             background: #fff;
           }
         }
@@ -87,7 +88,7 @@ body {
       }
 
       .menu-nav {
-        background: rgba($py-color, 0.9);
+        background: $py-color;
         height: 70%;
         width: 80%;
         overflow: hidden;
@@ -97,25 +98,49 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
 
         .nav-items {
           padding: 0.5rem;
           list-style: none;
+          margin: 0.5rem;
+          border-left: 3px solid #fff;
+          width: 90%;
+          text-align: center;
+          transform: translateX(100%);
+          @include easein;
 
+          &.show {
+            transform: translateX(0);
+          }
+
+          &.active {
+            border-left-color: $sy-color;
+
+            .nav-links {
+              color: #fff;
+            }
+          }
           .nav-links {
             text-decoration: none;
             color: $sy-color;
             font-weight: 400;
+            text-transform: uppercase;
             font-size: 2rem;
+          }
+        }
+
+        @for $i from 1 through 4 {
+          .show.nav-items:nth-child(#{$i}) {
+            transition-delay: $i * 0.1s + 0.1s;
           }
         }
       }
     }
   }
 
-  main#home {
+  main {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -126,6 +151,10 @@ body {
     flex-direction: column;
     @include easein;
     color: #fff;
+
+    &#home {
+      overflow: hidden;
+    }
 
     .greeting {
       width: 100%;
@@ -138,7 +167,6 @@ body {
         font-weight: 400;
       }
     }
-
     h1 {
       text-align: center;
       font-size: 3rem;
@@ -150,49 +178,41 @@ body {
         text-align: center;
       }
     }
-
-    &.fade {
-      opacity: 0.01;
+    h3 {
+      text-align: center;
     }
   }
 
   @include mdscreen {
-    main ul {
-      display: none;
-    }
-    img {
-      display: none;
-    }
   }
-  @include lgscreen {
+}
+@include lgscreen {
+  body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     .menu {
-      display: none;
-    }
+      position: absolute;
+      right: 0;
+      width: 50vh;
 
-    main#home {
-      margin-top: 15%;
-      margin: auto;
-      width: 80%;
-      height: 70vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      background: rgba($sy-color, 0.9);
-
-      .menu-nav1 {
-        position: absolute;
-        top: 0;
-        display: flex;
-        background: #000;
+      .menu-func {
         width: 100%;
-        .nav-items {
-          padding: 1rem 2rem;
+        transform: translateX(100%);
+
+        .menu-nav {
+          width: 100%;
+          border-radius: 0;
         }
       }
+    }
 
-      img {
-        width: 100px;
+    #home {
+      h1 {
+        font-size: 4rem !important;
+        .special {
+          font-size: 5rem;
+        }
       }
     }
   }
