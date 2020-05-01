@@ -4,11 +4,14 @@
   "description": "My Portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css -r"
+    "sass": "node-sass -w scss/ -o dist/css -r",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Ti Jhae",
   "license": "ISC",
+  "homepage": "https://jhaeti.github.io/myportfolio",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.0"
   }
 }

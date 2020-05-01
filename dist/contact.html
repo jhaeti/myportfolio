@@ -3,9 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>My Contact</title>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </head>
   <body>
-    <a href="index.html">home</a>
+    <header>
+      <div class="menu-burger">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <div class="menu-func">
+        <div class="profile">
+          <div class="img"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-items">
+            <a href="index.html" class="nav-links">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="about.html" class="nav-links">About</a>
+          </li>
+          <li class="nav-items">
+            <a href="work.html" class="nav-links">My Works</a>
+          </li>
+          <li class="nav-items active">
+            <a href="contact.html" class="nav-links">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="contact">
+      <div class="contact-head">
+        <h1>
+          Contact
+          <div class="special">Me</div>
+        </h1>
+      </div>
+      <h2>Contact me on any of the above options.</h2>
+      <div class="contacts">
+        <div class="contact">
+          <div class="label">Email:</div>
+          <div class="email delay">jhaeti@gmail.com</div>
+        </div>
+        <div class="contact">
+          <div class="label">Phone:</div>
+          <div class="phone delay">+233 543 718 434</div>
+        </div>
+        <div class="contact">
+          <div class="label">Other Phone:</div>
+          <div class="phone delay">+233 200 234 726</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>Copyright &copy; 2020;</h3>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>
