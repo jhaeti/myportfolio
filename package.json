@@ -12,6 +12,6 @@
   "homepage": "https://jhaeti.github.io/myportfolio",
   "dependencies": {
     "gh-pages": "^2.2.0",
-    "node-sass": "^4.14.0"
+    "node-sass": "^7.0.0"
   }
 }
